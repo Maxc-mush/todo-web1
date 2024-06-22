@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo Web</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Todo List</h1>
+        <div class="input-grid">
+            <input id="todo-input" type="text" placeholder="Write your to do here...">
+            <button onclick="addTodo()">Add</button>
+        </div>
+        <div class="todo-tabs">
+            <button id="all-todos-tab">All</button>
+            <button id="completed-todos-tab">completed</button>
+            <button id="uncompleted-todos-tab">uncompleted <span class="badge" id="uncompleted-todos-badge">1</span></button>
+        </div>
+        <ul class="todos-container"></ul>
+        <p id="no-todos-message" class="hidden">No todos available. Please add some!</p>
+    </div>
+</body>
+</html>

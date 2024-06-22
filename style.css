@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* colors  */
+:root {
+    --bg-color: #101114;
+    --primary-color: #1c1d20;
+    --secondary-color: #4a4d57;
+    --accent-color: #00ffc4;
+    --text-color: #f9f9f9;
+}
+body {
+    background-color: var(--bg-color);
+    min-height: 100vh;
+}
+html {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-color);
+    font-size: 16px;
+}
+.container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 10px;
+}
+h1 {
+    margin-top: 20px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    color: var(--accent-color);
+    text-align: center;
+    font-weight: 800;
+    letter-spacing: .1rem;
+}
+.input-grid {
+    display: flex;
+    margin-bottom: 20px;
+    border: 2px solid var(--secondary-color);
+    border-radius: 20px;
+}
+.input-grid input {
+    flex-grow: 1;
+    padding: 10px 20px;
+    background: transparent;
+    outline: none;
+    border: none;
+    caret-color: var(--accent-color);
+    font: inherit;
+    color: var(--text-color);
+}
+.input-grid button {
+    padding: 6px 20px;
+    border-radius: 18px;
+    font: inherit;
+    background: var(--accent-color);
+    border: none;
+    cursor: pointer;
+}
+.input-grid input:focus, .input-grid button:focus {
+    outline: none;
+    border: none;
+}
+.input-grid button:hover {
+    background: #08a782e5;
+}
+.todo-tabs {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 15px;
+}
+.todo-tabs button {
+    font: inherit;
+    background: transparent;
+    border: 2px solid var(--secondary-color);
+    padding: .2rem;
+    border-radius: 5px;
+    width: 7rem;
+    text-transform: capitalize;
+    color: var(--text-color);
+    position: relative;
+}
+.todo-tabs button.active {
+    background: var(--accent-color);
+    color: var(--bg-color);
+}
+.badge {
+    background-color: red;
+    color: var(--text-color);
+    border-radius: 50%;
+    font-size: 12px;
+    padding: 3px 7px;
+    position: absolute;
+    top: -0.8rem;
+    right: -0.8rem;
+}
+.each-todo {
+    background: var(--primary-color);
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+.each-todo label {
+    flex-grow: 1;
+}
+.each-todo input:checked ~ label{
+    text-decoration: line-through;
+}
+.todo-del {
+    padding: 1px 5px;
+    color: var(--bg-color);
+}
+.todo-del:hover {
+    color: red;
+}
+.hidden {
+    display: none;
+}
+#no-todos-message {
+    text-align: center;
+    margin-top: 10rem;
+}
